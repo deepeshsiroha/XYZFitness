@@ -740,4 +740,15 @@ footer {
     .price-card.popular {
         transform: scale(1);
     }
+
+    .pricing-grid {
+        flex-wrap: wrap;
+        overflow-x: visible;
+        padding-bottom: 0;
+    }
+
+    .price-card {
+        width: 100%;
+        max-width: 400px;
+    }
 }
