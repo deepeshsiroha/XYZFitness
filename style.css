@@ -751,4 +751,45 @@ footer {
         width: 100%;
         max-width: 400px;
     }
+
+    /* Mobile Stories Carousel */
+    .testimonials-grid {
+        mask-image: none;
+        -webkit-mask-image: none;
+        overflow: visible;
+        width: 100%;
+    }
+
+    .testimonials-track {
+        animation: none;
+        display: flex;
+        width: 100%;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 1rem;
+        padding: 0 1rem;
+        padding-bottom: 2rem;
+        /* Hide scrollbar */
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .testimonials-track::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari and Opera */
+    }
+
+    .testimonial-card {
+        min-width: 85vw;
+        max-width: 85vw;
+        scroll-snap-align: center;
+        margin: 0;
+    }
+
+    /* Hide duplicates for cleaner mobile experience */
+    .testimonial-card:nth-child(n+4) {
+        display: none;
+    }
 }
