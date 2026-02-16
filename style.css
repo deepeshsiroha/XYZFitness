@@ -753,22 +753,23 @@ footer {
     }
 
     /* Mobile Stories Carousel */
-    .testimonials-grid {
-        mask-image: none;
-        -webkit-mask-image: none;
-        overflow: visible;
-        width: 100%;
-    }
-
     .testimonials-track {
         animation: none;
         display: flex;
-        width: 100%;
+        width: calc(100% + 3rem);
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         gap: 1rem;
-        padding: 0 1rem;
-        padding-bottom: 2rem;
+        padding-top: 1.5rem;
+        padding-bottom: 2.5rem;
+
+        /* Snap points should center items */
+        scroll-padding-left: 1.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+
         /* Hide scrollbar */
         -ms-overflow-style: none;
         /* IE and Edge */
@@ -783,7 +784,8 @@ footer {
 
     .testimonial-card {
         min-width: 85vw;
-        max-width: 85vw;
+        max-width: calc(100% - 4rem);
+        /* Ensure shadow fits inside scroll padding */
         scroll-snap-align: center;
         margin: 0;
     }
